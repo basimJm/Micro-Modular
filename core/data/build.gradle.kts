@@ -10,6 +10,7 @@ android {
 }
 
 dependencies {
+    implementation(project(":feature:movie:data"))
     compose()
     hilt()
     retrofit()

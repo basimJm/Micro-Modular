@@ -10,8 +10,7 @@ android {
 }
 
 dependencies {
-    implementation(project(":core:data"))
-    implementation(project(":feature:movie:domain"))
+    api(project(":feature:movie:domain"))
     compose()
     hilt()
     retrofit()

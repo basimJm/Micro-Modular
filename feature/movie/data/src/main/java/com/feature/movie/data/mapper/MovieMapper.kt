@@ -1,6 +1,6 @@
 package com.feature.movie.data.mapper
 
-import com.core.data.remote.dto.MovieResultRemoteModel
+import com.feature.movie.data.remote.dto.MovieResultRemoteModel
 import com.feature.movie.domain.model.MovieResultModel
 
 fun MovieResultRemoteModel.toMovieResultModel(): MovieResultModel {

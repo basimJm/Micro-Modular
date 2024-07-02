@@ -1,8 +1,6 @@
 package com.core.data.di
 
-import com.core.data.remote.network.datasource.MoviesDataSource
 import com.core.data.remote.network.interceptor.TokenInterceptor
-import com.core.data.remote.network.service.MoviesService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module
@@ -59,15 +57,5 @@ object NetworkModule {
         .baseUrl(URL)
         .build()
 
-    @Provides
-    @Singleton
-    fun provideMoviesService(retrofit: Retrofit):MoviesService {
-        return  retrofit.create(MoviesService::class.java)
-    }
 
-    @Provides
-    @Singleton
-    fun provideServiceDataSource(moviesService: MoviesService): MoviesDataSource {
-        return MoviesDataSource(moviesService)
-    }
 }
