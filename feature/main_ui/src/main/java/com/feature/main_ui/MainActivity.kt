@@ -1,17 +1,10 @@
-package com.blackhand.modularbyfeature
+package com.feature.main_ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.blackhand.modularbyfeature.ui.theme.ModularByFeatureTheme
+import com.feature.main_ui.ui.theme.ModularByFeatureTheme
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -57,6 +57,8 @@ fun DependencyHandler.appModules() {
     implementation(project(":feature:movie:ui"))
     implementation(project(":feature:movie:domain"))
 
+    implementation(project(":feature:main_ui"))
+
     implementation(project(":feature:movie_details:data"))
     implementation(project(":feature:movie_details:domain"))
     implementation(project(":feature:movie_details:ui"))

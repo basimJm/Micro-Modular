@@ -1,4 +1,4 @@
-package com.blackhand.modularbyfeature.ui.theme
+package com.feature.main_ui.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
