@@ -8,4 +8,9 @@ object Version {
     const val lifecycleRuntimeKtx = "2.8.0"
     const val activityCompose = "1.9.0"
     const val composeBom = "2023.08.00"
+    const val hiltNavigationCompose = "1.2.0"
+    const val navigationCompose = "2.7.7"
+    const val coilCompose = "2.6.0"
+    const val retrofit ="2.9.0"
+    const val moshiKotlin = "1.9.3"
 }

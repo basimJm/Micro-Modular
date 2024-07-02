@@ -1,4 +1,4 @@
-import com.android.build.gradle.AppExtension
+import com.android.build.api.dsl.LibraryExtension
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -11,7 +11,7 @@ class MainGradlePlugin : Plugin<Project> {
 
     private fun applyPlugins(project: Project) {
         project.plugins.apply {
-            apply("com.android.application")
+            apply("com.android.library")
             apply("org.jetbrains.kotlin.android")
             apply("dagger.hilt.android.plugin")
             apply("kotlin-kapt")
@@ -19,39 +19,24 @@ class MainGradlePlugin : Plugin<Project> {
     }
 
     private fun setProjectConfig(project: Project) {
-        project.extensions.getByType(AppExtension::class.java).apply {
-            compileSdkVersion(34)
+        project.android().apply {
+            compileSdk = 34
 
             defaultConfig {
-                applicationId = "com.blackhand.modularbyfeature"
-                minSdkVersion(24)
-                targetSdkVersion(34)
-                versionCode = 1
-                versionName = "1.0"
-                testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-                vectorDrawables.useSupportLibrary = true
-            }
+                minSdk = 24
 
-            buildTypes {
-                getByName("release") {
-                    isMinifyEnabled = false
-                    proguardFiles(
-                        getDefaultProguardFile("proguard-android-optimize.txt"),
-                        "proguard-rules.pro"
-                    )
-                }
+                testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+                consumerProguardFiles("consumer-rules.pro")
             }
 
             compileOptions {
                 sourceCompatibility = JavaVersion.VERSION_1_8
                 targetCompatibility = JavaVersion.VERSION_1_8
             }
-
-
-            buildFeatures.compose = true
-            composeOptions.kotlinCompilerExtensionVersion = "1.5.1"
-
-            packagingOptions.resources.excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
+    }
+
+    private fun Project.android(): LibraryExtension {
+        return extensions.getByType(LibraryExtension::class.java)
     }
 }

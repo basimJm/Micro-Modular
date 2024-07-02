@@ -6,6 +6,7 @@ plugins {
 repositories {
     google()
     mavenCentral()
+    mavenLocal()
 }
 
 dependencies {
@@ -15,8 +16,8 @@ dependencies {
 
 }
 
-//val compileKotlin: KotlinCompile by tasks
-//compileKotlin.kotlinOptions {
-//    jvmTarget = "18"
-//
-//}
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    jvmTarget = JavaVersion.VERSION_19.majorVersion
+
+}
