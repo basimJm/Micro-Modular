@@ -5,6 +5,8 @@ plugins {
 apply<ModuleGradlePlugin>()
 android {
     namespace = "com.core.common"
+    
+
 }
 
 dependencies {

@@ -11,7 +11,7 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.0")
     implementation("com.android.tools.build:gradle:8.4.1")
-    implementation("com.google.dagger:hilt-android-gradle-plugin:2.44")
+    implementation("com.google.dagger:hilt-android-gradle-plugin:2.51.1")
 
 }
 

@@ -25,8 +25,8 @@ object Dependencies {
 
     // hilt
     const val hiltNavigationFragment = "androidx.hilt:hilt-navigation-fragment:1.0.0"
-    const val hiltAndroid = "com.google.dagger:hilt-android:2.44"
-    const val hiltCompliler = "com.google.dagger:hilt-android-compiler:2.44"
+    const val hiltAndroid = "com.google.dagger:hilt-android:2.51.1"
+    const val hiltCompliler = "com.google.dagger:hilt-android-compiler:2.51.1"
 
     // compose viewmodel
     const val comnposeLifeCycle =
