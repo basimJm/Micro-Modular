@@ -1,4 +1,4 @@
-package com.blackhand.modularbyfeature.ui.theme
+package com.feature.main_ui.ui.theme
 
 import android.app.Activity
 import android.os.Build

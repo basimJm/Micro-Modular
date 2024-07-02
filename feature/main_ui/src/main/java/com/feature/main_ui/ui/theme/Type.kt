@@ -1,4 +1,4 @@
-package com.blackhand.modularbyfeature.ui.theme
+package com.feature.main_ui.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
