@@ -2,13 +2,14 @@ plugins {
     `android-library`
     `kotlin-android`
 }
-apply<MainGradlePlugin>()
+
+apply<ModuleGradlePlugin>()
+
 android {
     namespace = "com.core.data"
 }
 
 dependencies {
-
     compose()
     hilt()
     retrofit()
